@@ -32,6 +32,7 @@ sudo apt-get install unzip
 ```bash
 jupyter notebook --generate-config
 emacs -nw ~/.jupyter/jupyter_notebook_config.py
+
 # change to the following...
 c = get_config()
 c.NotebookApp.ip = '*'
