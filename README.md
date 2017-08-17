@@ -1,18 +1,18 @@
-####install basics
+## install basics
 ```bash
 sudo apt-get update
 sudo apt-get install bzip2
 sudo apt-get install emacs
 ```
 
-####install CUDA
+## install CUDA
 ```bash
 sudo bash install-cuda.sh
 # Check CUDA
 nvidia-smi
 ```
 
-####install Machine Learning related
+## install Machine Learning related
 ```bash
 mkdir downloads
 cd downloads
@@ -28,18 +28,17 @@ sudo apt-get install g++
 sudo apt-get install unzip
 ```
 
-####update jupyter configs for remote access
+## update jupyter configs for remote access
 ```bash
 jupyter notebook --generate-config
 emacs -nw ~/.jupyter/jupyter_notebook_config.py
+# change to the following...
+c = get_config()
+c.NotebookApp.ip = '*'
+c.NotebookApp.open_browser = False
+c.NotebookApp.port = 7000
 ```
-
-#c = get_config()
-#c.NotebookApp.ip = '*'
-#c.NotebookApp.open_browser = False
-#c.NotebookApp.port = 7000
-
-####run jupyter
+## run jupyter
 ```bash
 jupyter-notebook --no-browser --port=7000
 ```
