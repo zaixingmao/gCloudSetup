@@ -1,11 +1,10 @@
-# gCloudSetup
-
 ####install basics
 ```bash
 sudo apt-get update
 sudo apt-get install bzip2
 sudo apt-get install emacs
 ```
+
 ####install CUDA
 ```bash
 sudo bash install-cuda.sh
